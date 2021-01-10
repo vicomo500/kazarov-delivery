@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_selectedTextColor">@android:color/black</color>
+    <color name="tab_textColor">#d1d1d1</color>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/med_margin"
+        app:cardCornerRadius="8dp"
+        app:contentPaddingBottom="@dimen/layout_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="fitXY"
+                tools:src="@drawable/pizza"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/med_margin"
+                android:layout_marginStart="@dimen/med_margin"
+                android:layout_marginEnd="@dimen/med_margin"
+                android:gravity="start"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                tools:text="Deluxe"/>
+
+            <TextView
+                android:id="@+id/ingredients"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/min_margin"
+                android:gravity="start"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toStartOf="@id/name"
+                app:layout_constraintEnd_toEndOf="@id/name"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/darker_gray"
+                tools:text="Chicken, ham, peperoni, tomato, spicy chorizo and mozarella"/>
+
+            <TextView
+                android:id="@+id/dimen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/lg_margin"
+                android:layout_marginStart="@dimen/med_margin"
+                android:layout_marginEnd="2dp"
+                android:gravity="start"
+                app:layout_constraintTop_toBottomOf="@id/ingredients"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/price"
+                app:layout_constraintHorizontal_weight="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@android:color/darker_gray"
+                tools:text="150 grams, 35 cm"/>
+
+            <Button
+                android:id="@+id/price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="@dimen/med_margin"
+                app:layout_constraintTop_toTopOf="@id/dimen"
+                app:layout_constraintStart_toEndOf="@id/dimen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/dimen"
+                app:backgroundTint="@null"
+                app:layout_constraintHorizontal_weight="1"
+                android:background="@drawable/price_button_background"
+                android:textAllCaps="false"
+                tools:text="46 usd"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

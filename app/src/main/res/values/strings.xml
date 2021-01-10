@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kazarov-Delivery</string>
+    <string name="cart">Cart</string>
+    <string name="menu">Menu</string>
+    <string name="delivery_is_free">Delivery is Free</string>
+    <string name="price_label">Value:</string>
+    <string name="dimen">%d grams, %d cm</string>
+    <string name="amount_in_usd">%.2f usd</string>
+    <string name="added">added + 1</string>
+</resources>
